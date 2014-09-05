@@ -22,7 +22,7 @@ Alternatively, you can build an image from this Dockerfile by executing
 
 ## Usage
 
-    docker run -d -p 22:22 -p 60001:60001 --volumes-from <your-volume> i686/gogs
+    docker run -d -p 22:22 -p 50000:50000 --volumes-from <your-volume> i686/gogs
 
 Open up your browser and navigate to
 
