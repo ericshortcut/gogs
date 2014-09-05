@@ -17,7 +17,7 @@ ADD ./app.ini /opt/gogs/custom/conf/app.ini
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 RUN sed -ri 's/#UsePAM no/UsePAM no/g' /etc/ssh/sshd_config
 
-EXPOSE 60001
+EXPOSE 50000
 EXPOSE 22
 
 CMD /opt/gogs/start.sh
