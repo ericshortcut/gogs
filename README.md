@@ -26,7 +26,7 @@ Alternatively, you can build an image from this Dockerfile by executing
 
 Open up your browser and navigate to
 
-    http://your.host.tld:60001
+    http://your.host.tld:50000
 
 ## License
 
