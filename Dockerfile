@@ -7,10 +7,10 @@ WORKDIR /root
 RUN apt-get update && \
     apt-get install -y unzip git-core openssh-server
 
-ADD http://gobuild.io/github.com/gogits/gogs/v0.4.2/linux/386 /tmp/gogs-v0.4.2.zip
+ADD http://gobuild.io/github.com/gogits/gogs/v0.5.0/linux/386 /tmp/gogs-v0.5.0.zip
 
 WORKDIR /tmp
-RUN unzip gogs-v0.4.2.zip -d /opt/gogs/ && rm gogs-v0.4.2.zip
+RUN unzip gogs-v0.5.0.zip -d /opt/gogs/ && rm gogs-v0.5.0.zip
 
 ADD ./app.ini /opt/gogs/custom/conf/app.ini
 
@@ -20,4 +20,5 @@ RUN sed -ri 's/#UsePAM no/UsePAM no/g' /etc/ssh/sshd_config
 EXPOSE 50000
 EXPOSE 22
 
-CMD /opt/gogs/start.sh
+WORKDIR /opt/gogs
+CMD ./scripts/start.sh
