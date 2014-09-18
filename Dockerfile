@@ -7,10 +7,10 @@ WORKDIR /root
 RUN apt-get update && \
     apt-get install -y unzip git-core openssh-server
 
-ADD http://gobuild.io/github.com/gogits/gogs/v0.5.0/linux/386 /tmp/gogs-v0.5.0.zip
+ADD http://gobuild.io/github.com/gogits/gogs/v0.5.2/linux/386 /tmp/gogs-v0.5.2.zip
 
 WORKDIR /tmp
-RUN unzip gogs-v0.5.0.zip -d /opt/gogs/ && rm gogs-v0.5.0.zip
+RUN unzip gogs-v0.5.2.zip -d /opt/gogs/ && rm gogs-v0.5.2.zip
 
 ADD ./app.ini /opt/gogs/custom/conf/app.ini
 
