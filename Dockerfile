@@ -7,10 +7,10 @@ WORKDIR /root
 RUN apt-get update && \
     apt-get install -y git-core openssh-server
 
-ADD http://gobuild3.qiniudn.com/github.com/gogits/gogs/tag-v-v0.5.2/gogs-linux-386.tar.gz /tmp/gogs-v0.5.2.tgz
+ADD http://gobuild3.qiniudn.com/github.com/gogits/gogs/tag-v-v0.5.5/gogs-linux-386.tar.gz /tmp/gogs-v0.5.5.tgz
 
 WORKDIR /tmp
-RUN mkdir -p /opt/gogs && tar xvfz gogs-v0.5.2.tgz --directory /opt/gogs && rm gogs-v0.5.2.tgz 
+RUN mkdir -p /opt/gogs && tar xvfz gogs-v0.5.5.tgz --directory /opt/gogs && rm gogs-v0.5.5.tgz 
 
 ADD ./app.ini /opt/gogs/custom/conf/app.ini
 
